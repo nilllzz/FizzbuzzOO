@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fizzbuzz
+namespace Fizzbuzz.Printables
 {
     interface IPrintable : IExecutable
     {
         void Print();
+
+        string GetText { get; }
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fizzbuzz
+namespace Fizzbuzz.Adapters
 {
-    class ForLoopExecutorDescriptorObject : LoopExecutorDescriptorObject
+    interface IAdapter
     {
+        object Adapt(object fromObject);
     }
 }

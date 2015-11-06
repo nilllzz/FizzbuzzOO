@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fizzbuzz
 {
-    class LoopExecutorDescriptorObject
+    interface IFactory
     {
-
     }
 }

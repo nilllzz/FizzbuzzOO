@@ -42,16 +42,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ForLoopExecutor.cs" />
-    <Compile Include="ForLoopExecutorDescriptorObject.cs" />
-    <Compile Include="LoopExecutorFactory.cs" />
+    <Compile Include="Adapters\Adapter.cs" />
+    <Compile Include="Adapters\AdapterFactory.cs" />
+    <Compile Include="Adapters\ForLoopExecutorDescriptorObjectToForLoopStateObjectAdapter.cs" />
+    <Compile Include="Adapters\IAdapter.cs" />
+    <Compile Include="Adapters\NumericValueToFizzbuzzPrintableAdapter.cs" />
+    <Compile Include="Core\FizzbuzzLogic.cs" />
+    <Compile Include="Core\FizzbuzzLogicExecutable.cs" />
+    <Compile Include="Core\FizzbuzzResultType.cs" />
+    <Compile Include="Core\IStandardExecutable.cs" />
+    <Compile Include="IFactory.cs" />
+    <Compile Include="Loops\For\ForLoopExecutor.cs" />
+    <Compile Include="Loops\For\ForLoopExecutorDescriptorObject.cs" />
+    <Compile Include="Loops\For\ForLoopStateObject.cs" />
+    <Compile Include="Loops\LoopExecutionReturnObject.cs" />
+    <Compile Include="Loops\LoopExecutorFactory.cs" />
     <Compile Include="IExecutable.cs" />
-    <Compile Include="IPrintable.cs" />
-    <Compile Include="LoopExecutor.cs" />
-    <Compile Include="LoopExecutorDescriptorObject.cs" />
+    <Compile Include="Printables\BuzzPrintable.cs" />
+    <Compile Include="Printables\FizzbuzzLogicPrintable.cs" />
+    <Compile Include="Printables\FizzbuzzPrintable.cs" />
+    <Compile Include="Printables\FizzPrintable.cs" />
+    <Compile Include="Printables\IPrintable.cs" />
+    <Compile Include="Loops\LoopExecutor.cs" />
+    <Compile Include="Loops\ILoopExecutorDescriptorObject.cs" />
+    <Compile Include="Loops\LoopStateObject.cs" />
+    <Compile Include="Printables\NumericalPrintable.cs" />
+    <Compile Include="Printables\Printable.cs" />
+    <Compile Include="Printables\PrintManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton.cs" />
+    <Compile Include="StackExecutor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

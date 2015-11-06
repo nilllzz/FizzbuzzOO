@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fizzbuzz
+namespace Fizzbuzz.Core
 {
-    abstract class LoopExecutor : IExecutable
+    enum FizzbuzzResultType
     {
-        public abstract void Execute();
+        Fizz,
+        Buzz,
+        Fizzbuzz,
+        Number
     }
 }
