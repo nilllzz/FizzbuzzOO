@@ -24,8 +24,8 @@ namespace Fizzbuzz.Adapters
             }
             else
             {
-                // todo: exception!
-                return null;
+                throw new ArgumentException(string.Format("The type combination ({0}, {1}) given to the AdapterFactory object is invalid.", typeFrom.Name, typeTo.Name), 
+                    nameof(typeFrom) + "|" + nameof(typeTo));
             }
         }
     }

@@ -12,36 +12,22 @@ namespace Fizzbuzz.Adapters
     {
         public override object Adapt(object fromObject)
         {
-            if (fromObject != null)
+            this.AssertType<int>(fromObject);
+
+            switch (FizzbuzzLogic.Instance.GetResultTypeFromNumber((int)fromObject))
             {
-                if (fromObject.GetType() == typeof(int))
-                {
-                    switch (FizzbuzzLogic.Instance.GetResultTypeFromNumber((int)fromObject))
-                    {
-                        case FizzbuzzResultType.Fizz:
-                            return new FizzPrintable();
-                        case FizzbuzzResultType.Buzz:
-                            return new BuzzPrintable();
-                        case FizzbuzzResultType.Fizzbuzz:
-                            return new FizzbuzzPrintable();
-                        case FizzbuzzResultType.Number:
-                            return new NumericalPrintable((int)fromObject);
-                        default:
-                            //todo: exception
-                            return null;
-                    }
-                }
-                else
-                {
-                    //todo: exception
-                    return null;
-                }
+                case FizzbuzzResultType.Fizz:
+                    return new FizzPrintable();
+                case FizzbuzzResultType.Buzz:
+                    return new BuzzPrintable();
+                case FizzbuzzResultType.Fizzbuzz:
+                    return new FizzbuzzPrintable();
+                case FizzbuzzResultType.Number:
+                    return new NumericalPrintable((int)fromObject);
             }
-            else
-            {
-                //todo: exception
-                return null;
-            }
+
+            // should never happen.
+            return null;
         }
     }
 }

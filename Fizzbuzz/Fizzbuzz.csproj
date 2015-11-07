@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\Adapter.cs" />
+    <Compile Include="Adapters\AdapterException.cs" />
     <Compile Include="Adapters\AdapterFactory.cs" />
     <Compile Include="Adapters\ForLoopExecutorDescriptorObjectToForLoopStateObjectAdapter.cs" />
     <Compile Include="Adapters\IAdapter.cs" />
@@ -77,6 +78,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

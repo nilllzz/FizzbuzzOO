@@ -11,28 +11,14 @@ namespace Fizzbuzz.Adapters
     {
         public override object Adapt(object fromObject)
         {
-            if (fromObject != null)
-            {
-                if (fromObject.GetType() == typeof(ForLoopExecutorDescriptorObject))
-                {
-                    ForLoopStateObject toObject = new ForLoopStateObject();
-                    toObject.ForStartPosition = ((ForLoopExecutorDescriptorObject)fromObject).ForStartPosition;
-                    toObject.ForEndPosition = ((ForLoopExecutorDescriptorObject)fromObject).ForEndPosition;
-                    toObject.ForIncrement = ((ForLoopExecutorDescriptorObject)fromObject).ForIncrement;
+            this.AssertType<ForLoopExecutorDescriptorObject>(fromObject);
 
-                    return toObject;
-                }
-                else
-                {
-                    // todo: exception
-                    return null;
-                }
-            }
-            else
-            {
-                // todo: exception
-                return null;
-            }
+            ForLoopStateObject toObject = new ForLoopStateObject();
+            toObject.ForStartPosition = ((ForLoopExecutorDescriptorObject)fromObject).ForStartPosition;
+            toObject.ForEndPosition = ((ForLoopExecutorDescriptorObject)fromObject).ForEndPosition;
+            toObject.ForIncrement = ((ForLoopExecutorDescriptorObject)fromObject).ForIncrement;
+
+            return toObject;
         }
     }
 }

@@ -31,10 +31,9 @@ namespace Fizzbuzz.Core
             {
                 _forEndPosition = Convert.ToInt32(length);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // todo: exception
-                throw;
+                throw new ArgumentException("Invalid input: Could not convert " + length + " to an integer.", ex);
             }
         }
 

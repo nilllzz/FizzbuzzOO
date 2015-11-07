@@ -34,14 +34,12 @@ namespace Fizzbuzz.Loops
                 }
                 else
                 {
-                    // todo: exception
-                    return null;
+                    throw new InvalidOperationException("The descriptor object for the loop is incorrect.");
                 }
             }
             else
             {
-                // todo: exception
-                return null;
+                throw new ArgumentNullException(nameof(descriptor));
             }
         }
 
